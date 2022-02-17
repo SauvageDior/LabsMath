@@ -1,8 +1,9 @@
 # lab_1_math
-from math import cos, log, pi
-
+from math import cos, pi
 import integrate
 import numpy as np
+import quad
+
 
 # 1
 from matplotlib import pyplot as plt
@@ -55,8 +56,8 @@ y2 = 3*x - 2
 
 
 fig, ax = plt.subplots()
-ax.plot(x, y1, color="blue", label="y(x)")
-ax.plot(x, y2, color="red", label="y'(x)")
+ax.plot(x, y1, color="blue", label="y=log(x+5)")
+ax.plot(x, y2, color="red", label="y=3x-2")
 
 ax.set_xlabel("x")
 ax.set_ylabel("y")
