@@ -2,7 +2,7 @@
 from math import cos, pi
 import integrate
 import numpy as np
-import quad
+from scipy import integrate
 
 
 # 1
@@ -35,11 +35,10 @@ print(vecs)
 
 # 4
 
-def f(x):
-    return 1 / np.sqrt((2 * x) - 1)
+f = lambda x: 1 / np.sqrt((2*x) - 1)
 
 
-v, err = integrate.quad(f, 0, 4)
+v, err = integrate.quad(f, 1, 4)
 print(v)
 
 # 5
@@ -47,7 +46,7 @@ print(v)
 f = lambda x, y: cos(x + y)
 a = lambda x: x
 v, err = integrate.dblquad(f, 0, pi/2, 0, a)
-
+print(v)
 # 6
 
 x = np.linspace(-10, 10, 100)
